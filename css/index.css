@@ -1,0 +1,286 @@
+@import url('https://fonts.cdnfonts.com/css/swiss-721');
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css");
+
+/* font */
+.pretendard {
+    font-family: "Pretendard Variable";
+}
+
+.swiss {
+    font-family: 'Swiss 721', sans-serif;
+}
+
+/* public */
+body {
+    background-color: #fff;
+    color: #000;
+}
+/* 모든 스크롤바 숨기기 */
+body {
+  scrollbar-width: thin; /* Firefox에 대한 스크롤바 너비 설정 */
+}
+body::-webkit-scrollbar {
+  width: 0em; /* 수직 스크롤바의 너비 설정 */
+}
+body::-webkit-scrollbar-thumb {
+  background-color: transparent; /* 스크롤바 색상을 투명으로 설정 */
+}
+
+#wrap {
+    width: 100%;
+}
+.clear {
+    clear: both;
+}
+
+/* 인트로 */
+.loader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    z-index: 2;
+    overflow: hidden;
+    z-index: 60;
+}
+.loader marquee {
+    opacity: 0.2;
+    margin: calc(100vw * 20 / 1920) 0;
+    padding: 0;
+    color: #646464;
+    font-size: calc(100vw * 180 / 1920);
+    font-family: "Cinzel";
+}
+.loader .intro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.loader .intro h1 {
+    font-size: calc(100vw * 124 / 1920);
+    color: #fff;
+}
+.intro-title .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+
+
+/* 헤더 */
+header {
+    position: fixed;
+    width: 100%;
+    height: calc(100vw * 80 / 1920);
+    border-bottom: solid calc(100vw * 2 / 1920) #000;
+    background-color: #fff;
+    z-index: 50;
+}
+header .logo img {
+    position: absolute;
+    width: calc(100vw * 290 / 1920);
+    left: calc(100vw * 100 / 1920);
+    top: calc(100vw * 19 / 1920);
+}
+header .menu {
+    position: absolute;
+    display: flex;
+    top: calc(100vw * 19 / 1920);
+    right: calc(100vw * 230 / 1920);
+}
+header .menu li {
+    padding: 0 calc(100vw * 30 / 1920);
+    font-size: calc(100vw * 22 / 1920);
+    letter-spacing: -0.04em;
+    color: #000;
+}
+header .menu li span {
+    font-size: calc(100vw * 17 / 1920);
+    color: #000;
+}
+header .hamburger {
+    position: absolute;
+    width: calc(100vw * 180 / 1920);
+    height: calc(100vw * 80 / 1920);
+    border-left: solid calc(100vw * 2 / 1920) #000;
+    right: 0;
+}
+
+/* 메인 */
+/* 폰트 움직임 */
+@font-face {
+	src: url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css");
+	font-family: "Pretendard Variable";
+	font-style: normal;
+}
+#title{
+    position: relative;
+    width: calc(100vw * 1000 / 1920);
+    top: calc(100vw * 160 / 1920);
+    left: calc(100vw * 200 / 1920);
+}
+h1 {
+	font-family: "Pretendard Variable";
+	text-rendering: optimizeSpeed;
+	color: #000;
+	width: 100%;
+	user-select: none;
+	line-height: 1;
+	/* margin: 0 auto; */
+	/* text-transform: uppercase; */
+	font-weight: 100;
+	text-align: center;
+	width: 100vw;
+    letter-spacing: calc(100vw * -10 / 1920);
+}
+h1 span {
+	transform: translateY(-10px);
+	user-select: none;
+}
+h1.flex {
+	display: flex;
+	/* justify-content: space-between; */
+}
+h1.stroke span {
+	position: relative;
+	color: #000;
+	line-height: inherit;
+}
+h1.stroke span:after {
+	content: attr(data-char);
+	-webkit-text-stroke-width: 3px;
+	-webkit-text-stroke-color: #000;
+	position: absolute;
+	left: 0;
+	line-height: inherit;
+	color: transparent;
+	z-index: -1;
+}
+/* -- */
+
+#main .text{
+    width: calc(100vw * 530 / 1920);
+    position: absolute;
+    top: calc(100vw * 530 / 1920);
+    right: calc(100vw * 410 / 1920);
+}
+#main .text .line{
+    width:  100%;
+    border-top: solid calc(100vw * 2 / 1920) #000;
+}
+#main .text .first{
+    margin-bottom:  calc(100vw * 60 / 1920);
+    font-size: calc(100vw * 20 / 1920);
+    letter-spacing: -0.02em;
+}
+#main .text .second{
+    margin-top:  calc(100vw * 60 / 1920);
+    font-size: calc(100vw * 20 / 1920);
+    letter-spacing: -0.02em;
+}
+#main .text2{
+    height: calc(100vw * 460 / 1920);
+    position: absolute;
+    left: calc(100vw * 50 / 1920);
+    top: calc(100vw * 530 / 1920);
+}
+#main .text2 .line{
+    height:  calc(100vw * 240 / 1920);
+    width: 0;
+    margin-left: calc(100vw * 60 / 1920);
+    border-left: solid calc(100vw * 2 / 1920) #000;
+}
+#main .text2 .up{
+    margin-bottom:  calc(100vw * 60 / 1920);
+    transform: rotate(-90deg);
+    font-size: calc(100vw * 20 / 1920);
+    letter-spacing: -0.02em;
+    font-weight: 400;
+}
+#main .text2 .down{
+    margin-top:  calc(100vw * 60 / 1920);
+    transform: rotate(-90deg);
+    font-size: calc(100vw * 20 / 1920);
+    letter-spacing: -0.02em;
+    font-weight: 400;
+}
+#main .text3{
+    width: calc(100vw * 150 / 1920);
+    position: absolute;
+    top: calc(100vw * 460 / 1920);
+    left: calc(100vw * 220 / 1920);
+    display: flex;
+    font-size: calc(100vw * 24 / 1920);
+}
+#main .text3 .line{
+    width:  calc(100vw * 62 / 1920);
+    border-top: solid calc(100vw * 2 / 1920) #000;
+    margin: 0 calc(100vw * 25 / 1920);
+    margin-top: calc(100vw * 5 / 1920);
+}
+#main .slider-container1 {
+    width: calc(100vw * 630 / 1920);
+    height: calc(100vw * 550 / 1920);
+    overflow: hidden;
+    position: absolute;
+    top: calc(100vw * 530 / 1920);
+    left: calc(100vw * 220 / 1920);
+}
+#main .slider-container1 .slider1 {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+#main .slider-container1 .slider1 img {
+    width: calc(100vw * 630 / 1920);
+    height: auto;
+}
+
+#main .slider-container2 {
+    width: calc(100vw * 250 / 1920);
+    height: calc(100vw * 680 / 1920);
+    overflow: hidden;
+    position: absolute;
+    top: calc(100vw * 180 / 1920);
+    right: calc(100vw * 0 / 1920);
+}
+#main .slider-container2 .slider2 {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+#main .slider-container2 .slider2 img {
+    width: calc(100vw * 250 / 1920);
+    height: auto;
+}
+
+#main .num{
+    position: absolute;
+    top: calc(100vw * 912 / 1920);
+    left: calc(100vw * 960 / 1920);
+}
+#main .num p{
+    font-size: calc(100vw * 32 / 1920);
+}
+#main .btn{
+    position: absolute;
+    top: calc(100vw * 916 / 1920);
+    right: calc(100vw * 260 / 1920);
+}
+#main .btn ul{
+    display: flex; 
+    align-items: center;
+    font-size: calc(100vw * 24 / 1920);
+}
+#main .btn ul li p{
+    padding-right: calc(100vw * 38 / 1920);
+}
+#main .btn ul li img{
+    width: calc(100vw * 60 / 1920);
+}
+

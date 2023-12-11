@@ -1,0 +1,202 @@
+@import url('https://fonts.cdnfonts.com/css/swiss-721');
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css");
+
+/* font */
+.pretendard {
+    font-family: "Pretendard Variable";
+}
+
+.swiss {
+    font-family: 'Swiss 721', sans-serif;
+}
+
+/* public */
+body {
+    background-color: #fff;
+    color: #000;
+}
+/* 모든 스크롤바 숨기기 */
+body {
+  scrollbar-width: thin; /* Firefox에 대한 스크롤바 너비 설정 */
+}
+body::-webkit-scrollbar {
+  width: 0em; /* 수직 스크롤바의 너비 설정 */
+}
+body::-webkit-scrollbar-thumb {
+  background-color: transparent; /* 스크롤바 색상을 투명으로 설정 */
+}
+
+#wrap {
+    width: 100%;
+}
+.clear {
+    clear: both;
+}
+
+/* 헤더 */
+header {
+    position: fixed;
+    width: 100%;
+    height: calc(100vw * 80 / 1920);
+    border-bottom: solid calc(100vw * 2 / 1920) #000;
+    background-color: #fff;
+    z-index: 50;
+}
+header .logo img {
+    position: absolute;
+    width: calc(100vw * 290 / 1920);
+    left: calc(100vw * 100 / 1920);
+    top: calc(100vw * 19 / 1920);
+}
+header .menu {
+    position: absolute;
+    display: flex;
+    top: calc(100vw * 19 / 1920);
+    right: calc(100vw * 230 / 1920);
+}
+header .menu li {
+    padding: 0 calc(100vw * 30 / 1920);
+    font-size: calc(100vw * 22 / 1920);
+    letter-spacing: -0.04em;
+    color: #000;
+}
+header .menu li span {
+    font-size: calc(100vw * 17 / 1920);
+    color: #000;
+}
+header .hamburger {
+    position: absolute;
+    width: calc(100vw * 180 / 1920);
+    height: calc(100vw * 80 / 1920);
+    border-left: solid calc(100vw * 2 / 1920) #000;
+    right: 0;
+}
+
+/* 갤러리 */
+#gallery{
+    position: relative;
+    width: 100%;
+    height: 250vh;
+}
+#gallery .fix{
+    position: fixed;
+    top: calc(100vw * 150 / 1920);
+    left: calc(100vw * 100 / 1920);
+}
+#gallery .fix .title{
+    font-size: calc(100vw * 40 / 1920);
+    margin-bottom:  calc(100vw * 60 / 1920);
+}
+#gallery .fix .text{
+    font-size: calc(100vw * 20 / 1920);
+    margin-top:  calc(100vw * 60 / 1920);
+}
+#gallery .fix .line{
+    width:  100%;
+    border-top: solid calc(100vw * 2 / 1920) #000;
+}
+
+#gallery #change {
+    position: absolute;
+    top: calc(100vw * 150 / 1920);
+    right: calc(100vw * 100 / 1920);
+    display: flex;
+    flex-wrap:wrap;
+    width:calc(100vw * 1190 / 1920);
+}
+#gallery #change > div {
+    display: flex;
+    width:calc(100vw * 545 / 1920);
+    height:calc(100vw * 400 / 1920);
+    margin-left: calc(100vw * 50 / 1920);
+    margin-bottom: calc(100vw * 50 / 1920);
+    /* border:calc(100vw * 2 / 1920) solid #000; */
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+#gallery #change > div img {
+    width:100%;
+}
+#gallery #change > div p {
+    /* border: solid 1px red; */
+    /* display: flex; */
+    position: absolute;
+    text-align: right;
+    margin-left: calc(100vw * 60 / 1920);
+    margin-top: calc(100vw * 311 / 1920);
+    font-size: calc(100vw * 32 / 1920);
+    color: #fff;
+    opacity: 0;
+}
+#gallery #change > div:hover p,
+#gallery #change > div.hover p {
+    opacity: 1;
+    transition: all .5s ease-in-out;
+}
+#gallery #change > div.active {
+    width:100%;
+    height: calc(100vw * 837 / 1920);
+}
+#gallery #change > div p.active {
+    font-size: calc(100vw * 66 / 1920);
+    margin-left: calc(100vw * 120 / 1920);
+    margin-top: calc(100vw * 650 / 1920);
+}
+
+#gallery #change .btn {
+    width: calc(100vw * 100 / 1920);
+    height: calc(100vw * 40 / 1920);
+    background-color: #fff;
+    color: #000;
+    border: calc(100vw * 1 / 1920) solid #000;
+    font-size: calc(100vw * 16 / 1920);
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-bottom: calc(100vw * 200 / 1920);
+    margin-left: calc(100vw * 570 / 1920);
+}
+#gallery #change .btn:hover {
+    background-color: #eee;
+    color: #000;
+}
+
+/* 푸터 */
+footer {
+    margin-top: calc(100vw * 200 / 1920);
+    background-color: #000;
+    color: #fff;
+    /* position: fixed; */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: calc(100vw * 300 /1920);
+}
+footer img{
+    position: absolute;
+    left: calc(100vw * 100 / 1920);
+    top: calc(100vw * 50 / 1920);
+    width: calc(100vw * 200 / 1920);
+}
+footer p{
+    font-size: calc(100vw * 12 / 1920);
+    text-align: left;
+    font-weight: 300;
+    position: absolute;
+    top: calc(100vw * 50 / 1920);
+    right: calc(100vw * 100 / 1920);
+}
+footer .sub{
+    text-align: left;
+    display: flex;
+    justify-content: center;
+}
+footer .sub ul{
+    padding: 0 calc(100vw * 30 /1920);
+    margin-top: calc(100vw * 50 /1920);
+}
+footer .sub ul li{
+    padding: calc(100vw * 10 /1920) 0;
+    font-size:  calc(100vw * 12 / 1920);
+    font-weight: 300;
+    cursor: pointer;
+}
